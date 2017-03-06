@@ -12,7 +12,7 @@ class Header extends React.Component {
   render() {
     return <div className="Header">
       <img src={require("../static/logo.png")} alt="e键美家"/>
-      <button onClick={this.handleClick}>登出</button>
+      <button onClick={this.handleClick}>退出</button>
     </div>
   }
 }

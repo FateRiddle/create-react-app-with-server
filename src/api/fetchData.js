@@ -21,6 +21,6 @@ export const fetchData = () => {
 }
 
 
-export const auth = (name,password) => delay(600).then(() => {
+export const auth = (name,password) => delay(500).then(() => {
   return fakedb.auth.name === name && fakedb.auth.password === password
 })

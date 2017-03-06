@@ -7,7 +7,7 @@ const app = express();
 
 const sql = require('mssql');
 
-const db = sql.connect("mssql:/user:password@youcaibao.sqlserver.rds.aliyuncs.com:3433/youcb_dev")
+const db = sql.connect("mssql://youcb:DJit9379@youcaibao.sqlserver.rds.aliyuncs.com:3433/youcb_dev")
 
 // Setup logger
 app.use(morgan(':remote-addr - :remote-user [:date[clf]] ":method :url HTTP/:http-version" :status :res[content-length] :response-time ms'));
@@ -16,7 +16,6 @@ app.use(morgan(':remote-addr - :remote-user [:date[clf]] ":method :url HTTP/:htt
 app.use(express.static(path.resolve(__dirname, '..', 'build')));
 
 app.get('/user', (req, res) => {
-  console.log('try to get data');
   db.then(()=>{
     new sql.Request().query('select * from tb_huodong order by createdAt desc').then(data => {
         res.send(data)

@@ -88,6 +88,11 @@ input:focus {
   margin: 10px 0;
 }
 
+.Login article {
+  color: red;
+  height: 15px;
+}
+
 .Login button {
   width: 240px;
   height: 40px;
@@ -174,6 +179,7 @@ input:focus {
 .TableHeader {
   height: 50px;
   font-size: 1.1rem;
+  font-weight: bold;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -204,4 +210,8 @@ tr {
   align-items: center;
   height: 3rem;
   border-bottom: 1px solid #dcdcdc;
+}
+
+td {
+  min-width: 80px;
 }

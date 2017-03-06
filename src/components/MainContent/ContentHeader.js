@@ -3,13 +3,11 @@ import Searchbar from './Searchbar'
 import { connect } from 'react-redux'
 import { fetchData } from '../../api/fetchData'
 import { updateUser } from '../../redux/actions/index'
-import axios from 'axios'
 
 class ContentHeader extends React.Component {
 
   handleClick = () => {
     fetchData().then(data => {
-      console.log(data)
       this.props.updateUser(data)
     })
   }
